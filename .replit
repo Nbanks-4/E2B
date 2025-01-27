@@ -1,4 +1,10 @@
 modules = ["web", "nodejs-20", "python-3.12"]
+run = "py main.py"
+compile = "make"
 
 [nix]
 channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "py main.py"]
+build = ["sh", "-c", "make"]
