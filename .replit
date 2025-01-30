@@ -8,3 +8,14 @@ channel = "stable-24_05"
 [deployment]
 run = ["sh", "-c", "py main.py"]
 build = ["sh", "-c", "make"]
+
+[workflows]
+runButton = "Run"
+
+[[workflows.workflow]]
+name = "Run"
+author = 38116763
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python main.py"
